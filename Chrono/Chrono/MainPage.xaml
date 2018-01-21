@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Chrono"
+             x:Class="Chrono.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Minutes : " />
+        <Label Grid.Column="1" Text="Seconde :"/>
+        <Label  Grid.Row="2" x:Name="minutesLabel" Text="{Binding minutes}" />
+        <Label Grid.Row="2" Grid.Column="1" x:Name="secLabel" Text="{Binding sec}"/>
+        <Button Grid.Row="3" x:Name="lancerChrono" Text="Start" Clicked = "BoutonLancerChrono_Clicked"></Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="stoperChrono" Text="Stop" Clicked = "BoutonStoperChrono_Clicked"></Button>
+    </Grid>
+
+</ContentPage>
